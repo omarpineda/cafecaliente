@@ -1,0 +1,39 @@
+<?php 
+function tabla($n1, $ni, $nf, $pord, $pcol, $scol){
+	if ($pord == "ass")
+	{
+		echo "<table class='ciclo2'>";
+				$n=$ni;
+				while ($n <= $nf)
+				{
+					//utilizar y alternar colores
+					$c=$n%2;
+					$color=($c==0)?"$pcol":"$scol";
+					$res = $n1*$n;
+					echo "<tr class='$color'>";
+						echo "<td>".$n1." X ".$n." = ".$res."</td>";
+					echo "</tr>";	
+					$n++;	
+				}
+		echo "</table>";
+	}
+	else
+	{
+		echo "<table class='ciclo2'>";
+				$n=$nf;
+				while ($n >= $ni)
+				{
+					//utilizar y alternar colores
+					$c=$n%2;
+					$color=($c==0)?"$pcol":"$scol";
+					$res = $n1*$n;
+					echo "<tr class='$color'>";
+						echo "<td>".$n1." X ".$n." = ".$res."</td>";
+					echo "</tr>";	
+					$n--;	
+				}
+		echo "</table>";
+	}
+}
+
+ ?>
