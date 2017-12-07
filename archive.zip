@@ -1,31 +1,6 @@
-<?php 
-	function formula1($pvalorA, $pvalorB, $pvalorC){
-		$praiz=($pvalorB * $pvalorB)-4*($pvalorA*($pvalorC));
-		$praiz2=sqrt($praiz);
-		$pvalB=-1*($pvalorB);
-		$pmult2a=2*$pvalorA;
-		$pdividendo=$pvalB+$praiz2;
-		$pdividendo2=$pvalB-$praiz2;
-
-		$operacion1= $pdividendo/$pmult2a;		
-
-		return $operacion1;
-	}
-
-
-
-
-	function formula2($pvalorA, $pvalorB, $pvalorC){
-		$praiz=($pvalorB * $pvalorB)-4*($pvalorA*($pvalorC));
-		$praiz2=sqrt($praiz);
-		$pvalB=-1*($pvalorB);
-		$pmult2a=2*$pvalorA;
-		
-		$pdividendo2=$pvalB-$praiz2;
-
-		
-		$operacion2= $pdividendo2/$pmult2a;
-
-		return $operacion2;
-	}
- ?>
+<?php
+$pRAD = $_POST["rad"];
+$pALT = $_POST["alt"];
+ 
+ $area=2*3.1416*$pRAD*($pRAD + $pALT);
+?>
